@@ -8,6 +8,8 @@ trigger:
     exclude:
       - 'VERSION.txt'
       - 'changelog.md'
+      - 'packaging/*'
+      - 'documentation/*'
 
 pr:
   branches:
@@ -21,6 +23,8 @@ pr:
     exclude:
       - 'VERSION.txt'
       - 'changelog.md'
+      - 'packaging/*'
+      - 'documentation/*'
 
 jobs:
   - job: TestBranchFilter
