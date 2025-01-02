@@ -2,14 +2,14 @@ trigger:
   branches:
     include:
       - main
-  paths:
-    include:
-      - '*'
-    exclude:
-      - 'VERSION.txt'
-      - 'changelog.md'
-      - 'packaging/*'
-      - 'documentation/*'
+  # paths:
+  #   include:
+  #     - '*'
+  #   exclude:
+  #     - 'VERSION.txt'
+  #     - 'changelog.md'
+  #     - 'packaging/*'
+  #     - 'documentation/*'
 
 pr:
   branches:
