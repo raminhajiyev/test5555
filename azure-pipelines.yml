@@ -17,14 +17,14 @@ pr:
       - '*'
     exclude:
       - 'currency/*'
-  paths:
-    include:
-      - '*'
-    exclude:
-      - 'VERSION.txt'
-      - 'changelog.md'
-      - 'packaging/*'
-      - 'documentation/*'
+  # paths:
+  #   include:
+  #     - '*'
+  #   exclude:
+  #     - 'VERSION.txt'
+  #     - 'changelog.md'
+  #     - 'packaging/*'
+  #     - 'documentation/*'
 
 jobs:
   - job: TestBranchFilter
