@@ -25,7 +25,6 @@ pr:
       - 'changelog.md'
       - 'packaging/*'
       - 'documentation/*'
-      - 'currency/*'
 
 jobs:
   - job: TestBranchFilter
