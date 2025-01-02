@@ -14,10 +14,12 @@ trigger:
 pr:
   branches:
     include:
-      - '*'  # Allow PRs to target any branch
+      - '*'
+    exclude:
+      - 'currency/*'
   paths:
     include:
-      - '*'  # Trigger for all files
+      - '*'
     exclude:
       - 'VERSION.txt'
       - 'changelog.md'
