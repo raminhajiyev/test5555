@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - main
+      - master
   paths:
     include:
       - '*'
@@ -14,21 +14,18 @@ trigger:
 pr:
   branches:
     include:
-      - '*'
-    exclude:
-      - 'currency/*'
+      - '*'  # Allow PRs to target any branch
   paths:
-    # include:
-    #   - '*'
+    include:
+      - '*'  # Trigger for all files
     exclude:
-      # - 'VERSION.txt'
-      # - 'changelog.md'
-      # - 'packaging/*'
-      # - 'documentation/*'
-      - 'currency/*'
+      - 'VERSION.txt'
+      - 'changelog.md'
+      - 'packaging/*'
+      - 'documentation/*'
 
 jobs:
-  - job: TestBranchFilter
-    steps:
-      - script: echo "Testing branch and path filters"
-
+- job: PR_Validation
+  condition: and(succeeded(), not(startsWith(variables['System.PullRequest.SourceBranch'], 'refs/heads/currency/')))
+  steps:
+    - script: echo "Running pipeline for PR"
